@@ -1,6 +1,7 @@
 
 /*
-  Bu proje mifare kart kullanarak kapı açma amacıyla yapılmıştır.
+  Mifare kartın mevcut ID'si kod içerisinde tanımlanmıştır ve bu ID'ye sahip kart RFID'ye okutulduğunda servo çalışacak ve kapının kilidi açılacaktır.
+  Tanımsız bir kart kullanıldığında servo motor çalışmayacaktır.
 
   RC522 Connection
 
