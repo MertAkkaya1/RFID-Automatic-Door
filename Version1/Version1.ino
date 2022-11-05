@@ -2,9 +2,8 @@
 /*
   Mifare kartın mevcut ID'si kod içerisinde tanımlanmıştır ve bu ID'ye sahip kart RFID'ye okutulduğunda servo çalışacak ve kapının kilidi açılacaktır.
   Tanımsız bir kart kullanıldığında servo motor çalışmayacaktır.
-
-  RC522 Connection
-
+  
+  RC522-Arduino UNO Bağlantı Pinleri;
   SDA 10
   SCK 13
   MOSI 11
