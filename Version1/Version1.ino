@@ -13,19 +13,19 @@
 */
 #include <MFRC522.h>
 #include <SPI.h>
-//#include<Servo.h>
+#include<Servo.h>
 
 #define RST_PIN 9
 #define SS_PIN 10
-//#define ServoPin 3
+#define ServoPin 3
 
-//Servo servoMotor;
+Servo servoMotor;
 MFRC522 mfrc522(SS_PIN, RST_PIN); 
 byte ID1[4] = {0x85, 0x28, 0x34, 0x119};
 byte ID2[4] = {0x0A, 0x30, 0x16, 0xCB};
 
 void setup() {
-  //servoMotor.attach(ServoPin);
+  servoMotor.attach(ServoPin);
   Serial.begin(9600);
   while (!Serial);
   SPI.begin();
@@ -55,11 +55,11 @@ void loop() {
         mfrc522.uid.uidByte[3] == ID2[3]){
     Serial.println("Kapi Acildi");
     ekranaYazdir();
-    /*
+    
       ServoMotor.write(180);
       delay(5000);
       ServoMotor.write(0);
-      delay(1000);*/
+      delay(1000);
   }
   else {
     Serial.println("Yetkisiz Kart");
